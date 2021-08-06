@@ -32,7 +32,7 @@ app: xyz
 spec:
 containers:
 - name: xyz
-image: naveenbansal/xyz
+image: naveenbansal/xyz:latest
 ports:
 - containerPort: 8084
 
