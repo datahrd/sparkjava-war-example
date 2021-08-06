@@ -14,7 +14,7 @@ template:
 metadata:
   labels:
     app: xyz
- spec:
+spec:
 containers:
 - name: xyz
 image: naveenbansal/xyz:latest
