@@ -1,8 +1,7 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: xyz
+  name: xyz
 labels:
 app: xyz
 namespace: kube-system
@@ -13,12 +12,25 @@ matchLabels:
 app: xyz
 template:
 metadata:
-labels:
-app: xyz
-spec:
+  labels:
+    app: xyz
+ spec:
 containers:
 - name: xyz
 image: naveenbansal/xyz:latest
 ports:
 - containerPort: 8084
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: xgenplus
+  labels:
+spec:
+type: ClusterIP
+  selector:
+  app: xgenplus
+ports:
+- port: 8084
+targetPort: 8080
 
