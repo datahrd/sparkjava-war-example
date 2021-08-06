@@ -1,11 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xyz
   labels:
     app: xyz
+  name: xyz  
   namespace: kube-system
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: xyz
