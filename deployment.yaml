@@ -6,7 +6,7 @@ metadata:
   name:  
   namespace: kube-system
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: xyz
@@ -29,7 +29,7 @@ metadata:
 spec:
   ports:
   - port: 8084
-    targetPort:8080
+    
   selector:
     app: xyz
 
