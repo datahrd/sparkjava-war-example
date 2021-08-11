@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: lxyz
-  name: deploy_xyz
+  name: deployxyz
 spec:
   replicas: 1
   selector:
@@ -11,7 +11,7 @@ spec:
       app: xyzpod
   template:
     metadata:
-      name: pod-testing 
+      name: podtesting 
       labels:
         app: xyzpod
     spec:
@@ -20,19 +20,7 @@ spec:
         image: naveenbansal/xyz:latest
         ports:
         - containerPort: 8084
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: service_xyz
-  labels:
-spec:
-  type:LoadBalancer
-  ports:
-  - port: 8084
-  selector:
-    app: xyzpod
-      
+
 
 
         
